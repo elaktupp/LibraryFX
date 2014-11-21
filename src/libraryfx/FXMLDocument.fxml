@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -7,34 +8,40 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
         <tabs>
           <Tab closable="false" text="Welcome">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0">
                      <children>
-                        <Label layoutX="253.0" layoutY="53.0" text="Welcome!">
+                        <Label text="Welcome, please enter your name and password">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="194.0" layoutY="128.0" text="First name:" />
-                        <Label layoutX="194.0" layoutY="169.0" text="Last name:" />
-                        <Label layoutX="196.0" layoutY="210.0" text="Password:" />
-                        <TextField layoutX="258.0" layoutY="124.0" />
-                        <TextField layoutX="258.0" layoutY="165.0" />
-                        <TextField layoutX="258.0" layoutY="206.0" />
-                        <Button layoutX="197.0" layoutY="256.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="211.0" text="SIGN IN" />
+                        <Label text="First name:" />
+                        <TextField />
+                        <Label text="Last name:" />
+                        <TextField />
+                        <Label text="Password:" />
+                        <TextField />
+                        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="25.0" prefWidth="211.0" text="SIGN IN">
+                           <VBox.margin>
+                              <Insets bottom="20.0" top="20.0" />
+                           </VBox.margin>
+                        </Button>
                      </children>
-                  </AnchorPane>
-            </content>
+                     <padding>
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </content>
           </Tab>
           <Tab closable="false" text="Client">
                <content>
-                  <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0">
+                  <SplitPane dividerPositions="0.25" prefHeight="160.0" prefWidth="200.0">
                     <items>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                            <children>
@@ -43,7 +50,7 @@
                         </AnchorPane>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                            <children>
-                              <VBox layoutY="-3.0" prefHeight="357.0" prefWidth="418.0" />
+                              <VBox layoutY="-3.0" prefHeight="357.0" prefWidth="164.0" />
                            </children>
                         </AnchorPane>
                     </items>
@@ -52,7 +59,7 @@
           </Tab>
             <Tab closable="false" text="Admin">
                <content>
-                  <SplitPane dividerPositions="0.29797979797979796" prefHeight="160.0" prefWidth="200.0">
+                  <SplitPane dividerPositions="0.25" prefHeight="160.0" prefWidth="200.0">
                     <items>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                            <children>
