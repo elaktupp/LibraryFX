@@ -10,7 +10,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
+import javafx.scene.control.Tab;
 
 /**
  *
@@ -19,17 +19,33 @@ import javafx.scene.control.Label;
 public class FXMLDocumentController implements Initializable {
     
     @FXML
-    private Label label;
+    private Tab tabWelcomeSignIn;
     
     @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
+    private Tab tabClient;
+    
+    @FXML
+    private Tab tabAdmin;
+    
+    @FXML
+    private void handleButtonSignIn(ActionEvent event) {
+        tabWelcomeSignIn.setDisable(true);
+        tabClient.setDisable(false);
+        tabAdmin.setDisable(false);
+    }
+
+    @FXML
+    private void handleButtonLogOut(ActionEvent event) {
+        tabWelcomeSignIn.setDisable(false);
+        tabClient.setDisable(true);
+        tabAdmin.setDisable(true);
     }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        tabWelcomeSignIn.setDisable(false);
+        tabClient.setDisable(true);
+        tabAdmin.setDisable(true);
     }    
     
 }
